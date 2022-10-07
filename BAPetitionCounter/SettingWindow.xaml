@@ -1,0 +1,27 @@
+﻿<Window x:Class="BAPetitionCounter.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BAPetitionCounter"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="SettingWindow" Height="120" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="시간을 밀리세컨드 단위로 입력하세요. (최소 5000)" FontFamily="./Fonts/#Spoqa Han Sans Neo Bold" />
+        <TextBox Grid.Row="1" x:Name="DelayTextBox" />
+        <Button Grid.Row="3" x:Name="OkButton" Click="OkButton_Click">
+            <TextBlock>
+                확인
+            </TextBlock>
+        </Button>
+    </Grid>
+</Window>
