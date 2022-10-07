@@ -1,0 +1,25 @@
+﻿<Window x:Class="BAPetitionCounter.DebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BAPetitionCounter"
+        mc:Ignorable="d"
+        Title="DebugWindow" Height="120" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Fetching URL" FontFamily="./Fonts/#Spoqa Han Sans Neo Bold" />
+        <TextBox Grid.Row="1" x:Name="FetchingURLTextBox" />
+        <Button Grid.Row="3" x:Name="OkButton" Click="OkButton_Click">
+            <TextBlock>
+                확인
+            </TextBlock>
+        </Button>
+    </Grid>
+</Window>

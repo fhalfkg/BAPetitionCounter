@@ -14,14 +14,14 @@ namespace BAPetitionCounter
 
     internal class PetitionInfoFetcher
     {
-        async internal static Task<int> Fetch()
+        async internal static Task<int> Fetch(string url)
         {
             try
             {
                 HttpClient client = new();
 
                 client.DefaultRequestHeaders.UserAgent.ParseAdd("PostmanRuntime/7.29.2");
-                var response = await client.GetAsync("https://petitions.assembly.go.kr/api/petits/E1F0379DA6573803E054B49691C1987F");
+                var response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 var result = response.Content.ReadAsStream();
                 var content = await JsonSerializer.DeserializeAsync<Info>(result);
